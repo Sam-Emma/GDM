@@ -11,6 +11,7 @@ def Home():
     bmi = ""
     miscarriage = ""
     n_pregnancy = ""
+    mess = ""
     if request.method == "POST":
         age = request.form["age"]
         bmi = request.form["bmi"]
