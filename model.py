@@ -27,18 +27,24 @@ def validation(age,bmi,miscarriage,n_pregnancy):
 def predict(age,bmi,miscarriage,n_pregnancy):
     error, empty_spaces = validation(age,bmi,miscarriage,n_pregnancy)
     print(error," " ,empty_spaces)
+    predict_real  = ""
+    FPG = ""
+    message = ""
     if empty_spaces > 0:
-        predict_real = 'empty'
-        FPG = 'empty'
+        predict_real = ''
+        FPG = ''
+        message = "empty"
     elif error > 0:
-        predict_real = 'invalid'
-        FPG = 'invalid'  
+        predict_real = ''
+        FPG = ''
+        message = "invalid"
     else:
         X_dataframe = pd.DataFrame([{'AGE':int(age), 'BMI':float(bmi), 'Miscariage Before 6 month':int(miscarriage),
                                       'Number of Pregnancy':int(n_pregnancy)}])        
         predict_real, FPG = makePrediction(X_dataframe)
         FPG = np.round(FPG[0],2)
-    return predict_real, FPG
+        message = 'success'
+    return predict_real, FPG, message
 
 def makePrediction(test_pre):
     classifier = load_model()
