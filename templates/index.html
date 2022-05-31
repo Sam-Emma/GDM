@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDM Checker</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel= "stylesheet" type= "text/css" href="{{ url_for('static', filename='styles/style.css') }}"/>
+</head>
+<body>
+     
+    <header class="head">
+        <label for="">GDM Checker</label>
+    </header>
+   
+    <hr>
+<br>
+<br>
+    <form action="/" method="POST" >
+    <input type="number" name="age" id="" placeholder="Age"><br>
+    <input type="number" name="bmi" id="" placeholder="BMI" step="any" ><br>
+    <input type="number" name="miscarriage" id="" placeholder="Miscarriage Before 6 month"><br>
+    <input type="number" name="n_pregnancy" id="" placeholder="Number of Pregnancy" min="-10" max="12">
+    <br>
+    <p>{{message}}</p>
+
+    <input type="submit" value="Check" class="button">
+
+</form> 
+<br>
+<table>
+   
+    <tbody>
+        <tr>
+            <td> <b>Input</b> </td>
+            <td><i><b> Age:</b> {{age_input}} </i><br>
+            <i><b>BMI:</b> {{bmi_input}} </i><br>
+            <i><b>Miscarriage Before 6 month:</b> {{miscarriage_input}} </i><br>
+            <i><b>Number of Pregnancy:</b> {{n_preg_input}} </i><br>
+            
+            </td>
+            
+        </tr>
+            </tbody>
+        </table>
+        <br>
+        <br>
+<table>   
+    <tbody>
+        <tr>
+            <td> <B>Predicted Fasting Plasma Glucose</B> </td>
+            <td>{{fpg}}</td>
+            
+        </tr>
+        <tr>
+            <td> <b>Predicted Outcome</b> </td>
+            <td>{{outcome}}</td>
+            
+        </tr>
+    </tbody>
+</table>
+   <br>
+<br>
+<br>
+<br>
+
+</body>
+</html>
