@@ -29,15 +29,16 @@ def predict(age,bmi,miscarriage,n_pregnancy):
     print(error," " ,empty_spaces)
     if empty_spaces > 0:
         predict_real = 'empty'
-        FPG = ['empty']
+        FPG = 'empty'
     elif error > 0:
         predict_real = 'invalid'
-        FPG = ['invalid']   
+        FPG = 'invalid'  
     else:
         X_dataframe = pd.DataFrame([{'AGE':int(age), 'BMI':float(bmi), 'Miscariage Before 6 month':int(miscarriage),
                                       'Number of Pregnancy':int(n_pregnancy)}])        
         predict_real, FPG = makePrediction(X_dataframe)
-    return predict_real, np.round(FPG[0],2) 
+        FPG = np.round(FPG[0],2)
+    return predict_real, FPG
 
 def makePrediction(test_pre):
     classifier = load_model()
