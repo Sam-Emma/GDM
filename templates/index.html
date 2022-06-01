@@ -11,6 +11,9 @@
 <body>
      
     <header class="head">
+    <div class="cabecalho">
+  <img src="/static/img/woman.jpeg" width="150" height="170">
+</div>
         <label for="">GDM Checker</label>
     </header>
    
@@ -19,7 +22,23 @@
 <br>
     <form action="/" method="POST" >
     <input type="number" name="age" id="" placeholder="Age"><br>
-    <input type="number" name="bmi" id="" placeholder="BMI" step="any" ><br>
+    <select id="" name="sex">
+        <option value="null">Select sex</option>
+       <option value="male">Male</option>
+       <option value="female" direction ="lrt">Female</option>
+     </select><br>
+    <select id="" name="pregnant_q" >
+        <option value="null">Are you pregnant?</option>
+       <option value="yes">Yes</option>
+       <option value="no" direction ="lrt">No</option>
+     </select><br>
+    <select id="" name="w_pregnancy" >
+        <option value="null">How long have you being pregnant?</option>
+       <option value="23">23 weeks</option>
+       <option value="24" direction ="lrt">24 weeks</option>
+     </select><br>
+    <input type="number" name="height" id="" placeholder="height (metres)" step = "any"><br>
+    <input type="number" name="weight" id="" placeholder="weight (kg)" step = "any"><br>
     <input type="number" name="miscarriage" id="" placeholder="Miscarriage Before 6 month"><br>
     <input type="number" name="n_pregnancy" id="" placeholder="Number of Pregnancy" min="-10" max="12">
     <br>
@@ -29,21 +48,16 @@
 
 </form> 
 <br>
-<table>
-   
-    <tbody>
-        <tr>
-            <td> <b>Input</b> </td>
-            <td><i><b> Age:</b> {{age_input}} </i><br>
-            <i><b>BMI:</b> {{bmi_input}} </i><br>
-            <i><b>Miscarriage Before 6 month:</b> {{miscarriage_input}} </i><br>
-            <i><b>Number of Pregnancy:</b> {{n_preg_input}} </i><br>
-            
-            </td>
-            
-        </tr>
-            </tbody>
-        </table>
+<br>
+    <i><b> Age:</b> {{age_input}} </i><br><br>
+    <i><b> Duration of pregnancy:</b> {{w_preg_input}} </i><br><br>
+    <i><b> height:</b> {{height_input}} </i><br><br>
+    <i><b> weight:</b> {{weight_input}} </i><br><br>
+    <i><b>Calculated BMI:</b> {{bmi_input}} </i><br><br>
+    <i><b>Miscarriage Before 6 month:</b> {{miscarriage_input}} </i><br><br>
+    <i><b>Number of Pregnancy:</b> {{n_preg_input}} </i><br><br>
+    
+
         <br>
         <br>
 <table>   

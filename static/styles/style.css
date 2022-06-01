@@ -9,16 +9,34 @@
 }
 .head{
    
-    background-color: #FDFFF5;
+    
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 30pt;
-    padding: 30px;
+    padding: 0px;
     color:green;
     font-style: inherit;
     text-align: center;
     
   
         
+}
+div.cabecalho {
+  padding: 20px;
+  font-size: 250%;
+  text-align: center;
+  background-image: url("/static/imag/.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  align-items: center;
+}
+
+div.cabecalho span {
+  margin-left: 20px;
+}
+
+img {
+  object-fit: cover;
 }
 .button{
     text-align: center;
