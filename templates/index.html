@@ -20,27 +20,49 @@
     <hr>
 <br>
 <br>
+
     <form action="/" method="POST" >
-    <input type="number" name="age" id="" placeholder="Age"><br>
-    <select id="" name="sex">
-        <option value="null">Select sex</option>
-       <option value="male">Male</option>
-       <option value="female" direction ="lrt">Female</option>
+
+    <input type="number" name="age" value="{{request.form["age"]}}" id="" placeholder="Age" min="15" max="50"><br>
+    <select id="" name="sex"  >
+        <option value="{{request.form["sex"]}}"  >Select sex</option>
+       <option value="{{request.form["sex"]}}" disabled>male</option>
+       <option value="{{request.form["sex"]}}" direction ="lrt">female</option>
      </select><br>
     <select id="" name="pregnant_q" >
         <option value="null">Are you pregnant?</option>
        <option value="yes">Yes</option>
-       <option value="no" direction ="lrt">No</option>
+       <option value="no" direction ="lrt" disabled>No</option>
      </select><br>
     <select id="" name="w_pregnancy" >
         <option value="null">How long have you being pregnant?</option>
        <option value="23">23 weeks</option>
        <option value="24" direction ="lrt">24 weeks</option>
      </select><br>
-    <input type="number" name="height" id="" placeholder="height (metres)" step = "any"><br>
-    <input type="number" name="weight" id="" placeholder="weight (kg)" step = "any"><br>
-    <input type="number" name="miscarriage" id="" placeholder="Miscarriage Before 6 month"><br>
-    <input type="number" name="n_pregnancy" id="" placeholder="Number of Pregnancy" min="-10" max="12">
+         <select id="" name="q1" >
+             <option value="null">Do you feel unusual thirst?</option>
+            <option value="yes">Yes</option>
+            <option value="no" direction ="lrt">No</option>
+          </select><br>
+         <select id="" name="q2" >
+             <option value="null">Frequent urination in large amount?</option>
+            <option value="yes">Yes</option>
+            <option value="no" direction ="lrt">No</option>
+          </select><br>
+         <select id="" name="q3" >
+             <option value="null">Do you experience fatigue?</option>
+            <option value="yes">Yes</option>
+            <option value="no" direction ="lrt">No</option>
+          </select><br>
+         <select id="" name="q4" >
+             <option value="null">Do you experience lurred Vision?</option>
+            <option value="yes">Yes</option>
+            <option value="no" direction ="lrt">No</option>
+          </select><br>
+    <input type="number" value="{{request.form["height"]}}" name="height" id="" placeholder="height (metres)" step = "any" min="0" max="5"><br>
+    <input type="number" value="{{request.form["weight"]}}" name="weight" id="" placeholder="weight (kg)" step = "any" min="20" max="100"><br>
+    <input type="number" value="{{request.form["miscarriage"]}}" name="miscarriage" id="" placeholder="Miscarriage Before 6 month" min="0" max="6"><br>
+    <input type="number" value="{{request.form["n_pregnancy"]}}" name="n_pregnancy" id="" placeholder="Number of Pregnancy" min="0" max="20">
     <br>
     <p>{{message}}</p>
 
