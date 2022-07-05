@@ -1,6 +1,6 @@
 
 *{
-    padding: 20,20,20,20;
+    padding: 30,30,30,30;
     margin: 20,20,20,20;
     text-align: center;
     
@@ -38,12 +38,17 @@ div.cabecalho span {
 img {
   object-fit: cover;
 }
+.name{
+  font-weight: bold;
+  text-align: left;
+}
 .button{
     text-align: center;
     padding: 10px;
     margin: 10px;
     border-radius: 10px;
     color:white;
+    width: 70%;
     background-color: black;
     font-size: larger;
     border:none;
@@ -60,7 +65,7 @@ img {
     border: 1px solid;
     }
 form{
-    font-size: 15pt;
+    font-size: 10pt;
     margin: 20;
     display: block;
 
@@ -68,10 +73,10 @@ form{
 }
 form input{
     text-align: left;
-    font-size: 12pt;
+    font-size: 10pt;
     padding: 5px;
     padding-left:8px;
-    width: 70%;
+    width: 80%;
     margin-top: 7px;
     margin-left: 5px;
     font-size: larger;
@@ -82,9 +87,9 @@ form input{
 select{
     direction: ltr;
     text-align-last: left;
-    font-size: 15pt;
+    font-size: 10pt;
     padding: 5px;
-    width: 70.8%;
+    width: 84%;
     margin-top: 7px;
     margin-left: 5px;
     font-size: larger;
