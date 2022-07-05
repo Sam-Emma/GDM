@@ -40,7 +40,7 @@ def validation(age,sex,weight,height,
         error = 1
         message = "Invalid input"
     
-    return error, message, height, weight
+    return error, message
     
     
 
@@ -48,7 +48,7 @@ def predict(age,sex,q_pregnancy,
                             height, weight,
                             miscarriage,n_pregnancy,w_pregnancy):
     
-    error, message, height, weight = validation(age,sex,
+    error, message = validation(age,sex,
                                 weight,height, q_pregnancy,
                                 miscarriage,n_pregnancy, w_pregnancy)
     
