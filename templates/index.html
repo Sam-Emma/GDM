@@ -55,14 +55,14 @@
             <option value="no" direction ="lrt">No</option>
           </select><br>
          <select id="" name="q4" >
-             <option value="null">Do you experience lurred Vision?</option>
+             <option value="null">Do you experience blurred Vision?</option>
             <option value="yes">Yes</option>
             <option value="no" direction ="lrt">No</option>
           </select><br>
     <input type="number" value="{{request.form["height"]}}" name="height" id="" placeholder="height (metres)" step = "any" min="0" max="5"><br>
     <input type="number" value="{{request.form["weight"]}}" name="weight" id="" placeholder="weight (kg)" step = "any" min="20" max="100"><br>
-    <input type="number" value="{{request.form["miscarriage"]}}" name="miscarriage" id="" placeholder="Miscarriage Before 6 month" min="0" max="6"><br>
-    <input type="number" value="{{request.form["n_pregnancy"]}}" name="n_pregnancy" id="" placeholder="Number of Pregnancy" min="0" max="20">
+    <input type="number" value="{{request.form["miscarriage"]}}" name="miscarriage" id="" placeholder="Number of miscarriage before 6 months" min="0" max="6"><br>
+    <input type="number" value="{{request.form["n_pregnancy"]}}" name="n_pregnancy" id="" placeholder="Number of Pregnancy before now" min="0" max="20">
     <br>
     <p>{{message}}</p>
 
